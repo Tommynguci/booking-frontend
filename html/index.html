@@ -4,18 +4,25 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>LuxStay</title>
+        <link rel="shortcut icon" href="../img/five-icon.png" type="image/x-icon" sizes="40x40">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossorigin="crossorigin">
         <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="../css/app.css">
     </head>
     <body>
+        <!-- loading page -->
+        <div class="loader" >
+            <i class="fas fa-spinner loader-icon"></i>
+        </div>
+        <!-- header -->
         <div class="app-header">
             <div class="container container--md w--100">
                 <div class="row middle-xs">
@@ -192,8 +199,8 @@
                                                                 class="modal-booking-time el-popover__reference"
                                                                 aria-describedby="el-popover-2205"
                                                                 tabindex="0">
-                                                                <p data-v-0ae22c83="" class="cursor">
-                                                                    Số khách
+                                                                <p data-v-0ae22c83="" class="cursor bold">
+                                                                    Khách hàng
                                                                 </p>
                                                             </div>
                                                         </span>
@@ -283,47 +290,52 @@
                                 <a href="" class="menu__link">Đăng nhập</a>
                             </li>
                             <li class="menu__item is-relative">
-                                <div data-v-0550aeae="">
-                                    <span
-                                        data-v-0550aeae=""
-                                        data-action="popover"
-                                        class="menu__link btn--dropdown semi-bold is-flex middle-xs is-relative pointer cursor"><img data-v-0550aeae="" src="../img/vi.svg" width="24" height="24">
-                                        <span data-v-0550aeae="" class="ml--6">VND</span></span>
-                                        <div class="change__languages show">
-                                            <div class="change__languages-container">
-                                                <ul class="change__languages-list">
-                                                    <li class="change__languages-item">
-                                                        <div class="change__languages-vi">
-                                                            <img src="../img/vi.svg" alt="" class="header__nav-language-img">
-                                                            <p class="change__languages-vi-name">Tiếng Việt</p>
-                                                            <span class="far fa-check"></span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="change__languages-item">
-                                                        <div class="change__languages-vi">
-                                                            <img src="../img/en.svg" alt="" class="header__nav-language-img">
-                                                            <p class="change__languages-vi-name">English</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                
-                                                <ul class="change__languages-list space-line">
-                                                    <li class="change__languages-item">
-                                                        <div class="change__languages-vi">
-                                                            <strong>VND</strong>
-                                                            <p class="change__languages-vi-name">Tiếng Việt</p>
-                                                            <span class="far fa-check"></span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="change__languages-item">
-                                                        <div class="change__languages-vi">
-                                                            <strong>USD</strong>
-                                                            <p class="change__languages-vi-name">United States Dollar</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                <div class="header__nav-language">
+                                    <img src="../img/vi.svg" alt="VietNamese" class="header__nav-language-img">
+                                    <p class="header__nav-language-name">VND</p>
+                                    <span class="fas fa-caret-down"></span>
+                                </div>
+                                <div class="change__languages">
+                                    <div class="change__languages-container">
+                                        <!-- <ul class="change__languages-list space-line"> -->
+                                        <ul class="change__languages-list">
+                                            <li class="change__languages-item">
+                                                <div class="change__languages-vi">
+                                                    <img src="../img/vi.svg" alt="" class="header__nav-language-img">
+                                                    <p class="change__languages-vi-name">Tiếng Việt</p>
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                            </li>
+                                            <li class="change__languages-item">
+                                                <div class="change__languages-vi">
+                                                    <img src="../img/en.svg" alt="" class="header__nav-language-img">
+                                                    <p class="change__languages-vi-name">English</p>
+                                                </div>
+                                            </li>
+                                            <li class="change__languages-item">
+                                                <div class="change__languages-vi">
+                                                    <img src="../img/ko.svg" alt="" class="header__nav-language-img">
+                                                    <p class="change__languages-vi-name">Korean</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        <!-- <ul class="change__languages-list space-line">
+                                            <li class="change__languages-item">
+                                                <div class="change__languages-vi">
+                                                    <strong>VND</strong>
+                                                    <p class="change__languages-vi-name">Tiếng Việt</p>
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                            </li>
+                                            <li class="change__languages-item">
+                                                <div class="change__languages-vi">
+                                                    <strong>USD</strong>
+                                                    <p class="change__languages-vi-name">U.S Dollar</p>
+                                                </div>
+                                            </li>
+                                        </ul> -->
+                                    </div>
                                 </div>
                             </li>
                         </ul>

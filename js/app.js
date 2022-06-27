@@ -14,3 +14,8 @@ function showChangLanguages() {
     changeLanguagesOptions.classList.toggle('show');
 }
 btnChangeLanguages.addEventListener('click', showChangLanguages);
+
+// Loader Page
+$(window).on('load', function(e) {
+    $('.loader').delay(1000).fadeOut('lows');
+});
